@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald|Roboto:500");
+html, body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #008a39;
+  background-image: url("background.jpg");
+}
+
+h1 {
+  color: white;
+  font-size: 50px;
+}
+
+.container {
+  display: grid;
+  grid-gap: 2px;
+}
+
+@media (min-width: 700px) {
+  .container {
+    grid-template: 110px/repeat(9, 74px);
+    grid-template-areas: "a s d f g j k l p";
+  }
+  .container > #a {
+    grid-area: a;
+  }
+  .container > #s {
+    grid-area: s;
+  }
+  .container > #d {
+    grid-area: d;
+  }
+  .container > #f {
+    grid-area: f;
+  }
+  .container > #\ {
+    grid-area: g;
+  }
+  .container > #j {
+    grid-area: j;
+  }
+  .container > #k {
+    grid-area: k;
+  }
+  .container > #l {
+    grid-area: l;
+  }
+  .container > #\; {
+    grid-area: p;
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    grid-template: repeat(2, 70px)/repeat(5, 50px);
+  }
+}
+
+.container div {
+  background-color: #eee;
+  height: 110px;
+  width: 74px;
+  border: 4px solid #00435c;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: 20ms;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 700px) {
+  .container div {
+    height: 70px;
+    width: 50px;
+  }
+}
+
+@media (max-width: 700px) {
+  .container div.bottom-row {
+    position: relative;
+    left: 26px;
+  }
+}
+
+.container div.active {
+  border-color: #ffa600;
+  border-width: 5px;
+  transform: scale(0.8);
+}
+
+.container div p {
+  margin: 0;
+  padding: 0;
+}
+
+.container div .key-title {
+  font-family: 'Roboto';
+  font-size: 40px;
+}
+
+@media (max-width: 700px) {
+  .container div .key-title {
+    margin-bottom: -10px;
+  }
+}
+
+.container div .key-desc {
+  font-family: 'Oswald';
+}
+
+@media (max-width: 700px) {
+  .container div .key-desc {
+    font-size: 12px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
