@@ -28,6 +28,13 @@ h1 {
   @media (max-width: $small) {
     display: none;
   }
+  $outline: 2px;
+  $blur: 2px;
+  text-shadow:
+  -1 * $outline 0 $blur black,
+   1 * $outline 0 $blur black,
+  0 -1 * $outline $blur black,
+  0  1 * $outline $blur black,
 }
 
 .container {

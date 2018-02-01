@@ -8,7 +8,7 @@ document.onreadystatechange = () => {
     function keyPress(key) {
       if (key >= '0' && key <= 9 || key === '`') {
         document.querySelectorAll('audio').forEach(sound => {
-          sound.volume = key != 0 ? (key !== '`' ? parseFloat(key) / 10 : 0) : 1;
+          sound.volume = key !== '0' ? (key !== '`' ? parseFloat(key) / 10 : 0) : 1;
         })
         return;
       }
