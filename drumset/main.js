@@ -1,7 +1,7 @@
 document.onreadystatechange = () => {
   if (document.readyState === 'interactive') {
     document.querySelectorAll('audio').forEach(sound => {
-      sound.volume = 0.8;
+      // sound.volume = 0.8; // disabled, maybe changeable volume in the somewhen in the future
     });
 
     function keyPress(key) {

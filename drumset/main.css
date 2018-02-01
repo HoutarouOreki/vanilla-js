@@ -25,6 +25,12 @@ h1 {
   font-size: 50px;
 }
 
+@media (max-width: 700px) {
+  h1 {
+    display: none;
+  }
+}
+
 .container {
   display: grid;
   grid-gap: 2px;
@@ -66,7 +72,7 @@ h1 {
 
 @media (max-width: 700px) {
   .container {
-    grid-template: repeat(2, 70px)/repeat(5, 50px);
+    grid-template: repeat(2, 70px)/repeat(5, 70px);
   }
 }
 
@@ -77,7 +83,8 @@ h1 {
   border: 4px solid #00435c;
   border-radius: 8px;
   box-sizing: border-box;
-  transition: 20ms;
+  transition: 40ms;
+  transition-timing-function: ease-in;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -87,14 +94,14 @@ h1 {
 @media (max-width: 700px) {
   .container div {
     height: 70px;
-    width: 50px;
+    width: 70px;
   }
 }
 
 @media (max-width: 700px) {
   .container div.bottom-row {
     position: relative;
-    left: 26px;
+    left: 36px;
   }
 }
 
@@ -102,6 +109,7 @@ h1 {
   border-color: #ffa600;
   border-width: 5px;
   transform: scale(0.8);
+  filter: blur(1px);
 }
 
 .container div p {
