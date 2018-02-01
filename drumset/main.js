@@ -5,6 +5,14 @@ document.onreadystatechange = () => {
     });
 
     function keyPress(key) {
+      console.log(key);
+      if (key > 0) {
+        console.log('volume: ' + key);
+        document.querySelectorAll('audio').forEach(sound => {
+        sound.volume = parseFloat(key) / 10;
+        return;
+        })
+      }
       if (!document.getElementById(key)) return;
       document.getElementById(key).classList.add('active');
       document.querySelector('[data-key="' + key + '"]').pause();
