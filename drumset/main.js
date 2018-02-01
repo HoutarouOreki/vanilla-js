@@ -1,3 +1,4 @@
+console.log('Volume changing: top row keys from ` to 0.');
 document.onreadystatechange = () => {
   if (document.readyState === 'interactive') {
     document.querySelectorAll('audio').forEach(sound => {
@@ -5,13 +6,11 @@ document.onreadystatechange = () => {
     });
 
     function keyPress(key) {
-      console.log(key);
-      if (key > 0) {
-        console.log('volume: ' + key);
+      if (key >= '0' && key <= 9 || key === '`') {
         document.querySelectorAll('audio').forEach(sound => {
-        sound.volume = parseFloat(key) / 10;
-        return;
+          sound.volume = key !== 0 ? (key !== '`' ? parseFloat(key) / 10 : 0) : 1;
         })
+        return;
       }
       if (!document.getElementById(key)) return;
       document.getElementById(key).classList.add('active');
